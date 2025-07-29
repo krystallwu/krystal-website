@@ -1,9 +1,12 @@
-import Wave from 'react-wavify';
 import Header from '@/src/app/components/Header';
 import Image from 'next/image';
-import linkedin from 'public/images/linkedin.png';
-import github from 'public/images/github.png';
-import email from 'public/images/email.png';
+import wandersync from 'public/images/wandersync.png';
+import hotel from 'public/images/hotel.png';
+import mrktmind from 'public/images/mrktmind.png';
+import fcf from 'public/images/player.png';
+import storeview from 'public/images/store.png';
+import portfolio from 'public/images/portfolio.png';
+
 
 type Project = {
   title: string;
@@ -11,69 +14,93 @@ type Project = {
   link: string;
 };
 
-const projects: Project[] = [
+
+const projects = [
   {
-    title: 'Weather App',
-    description: 'A responsive app using OpenWeather API and TypeScript.',
-    link: 'https://example.com/weather'
+    title: 'StoreView',
+    description:
+      'A web application that calculates impression scores for potential storefront locations using data science!',
+    image: storeview, 
+    bgColor: 'bg-pink-300',
+    link: 'https://github.com/hyeokjinjin/StoreVisualizer',
   },
   {
+    title: 'Food Court Fighter',
+    description:
+      'An interactive web game that showcases the different cuisines of different regions of China!',
+    image: fcf,
+    bgColor: 'bg-pink-300',
+    link: 'https://chinese-game-fawn.vercel.app/'
+  },
+    {
+    title: 'WanderSync',
+    description:
+      'An Android app that allows users to collaborate and plan travel itineraries with friends and family.',
+    image: wandersync, 
+    bgColor: 'bg-pink-300',
+    link: 'https://github.com/ayhschen/CS2340C_Team23'
+  },
+  {
+    title: 'Hotel Finder',
+    description:
+      'A vector query engine using Qdrant to find hotels based on user preferences.',
+    image: hotel,
+    bgColor: 'bg-pink-300',
+    link: 'https://github.com/rrhzhang/hotel_finder'
+  },
+  {
+    title: 'mrktmind',
+    description:
+      'A virtual market that provides users with data on the cheapest times to buy items, curating a homepage tailored to users’ interests.',
+    image: mrktmind,
+    bgColor: 'bg-pink-300',
+    link: 'https://github.com/rrhzhang/mrktmind'
+  },
+    {
     title: 'Personal Portfolio',
-    description: 'My personal site built with Next.js and Tailwind CSS.',
-    link: 'https://example.com/portfolio'
+    description:
+      'Repository for this personal portfolio website!',
+    image: portfolio,
+    bgColor: 'bg-pink-300',
+    link: 'https://github.com/krystallwu/krystal-website'
   }
 ];
 
 const Portfolio = () => {
   return (
-    <div className='mb-8 overflow-hidden'>
+    <div className='mb-8 overflow-hidden p-4'>
       <Header />
-      <h1>My Work</h1>
-      <ul>
-        {projects.map((project, index) => (
-          <li key={index} style={{ marginBottom: '1rem' }}>
-            <h2>{project.title}</h2>
-            <p>{project.description}</p>
-            <a href={project.link} target="_blank" rel="noopener noreferrer">
-              View Project
-            </a>
-          </li>
+    <section className="px-6">
+      <h1 className="text-3xl font-bold text-center mb-4">My Portfolio</h1>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {projects.map((project, idx) => (
+          <div
+            key={idx}
+            className={`rounded-xl p-6 text-white transition-transform transform hover:scale-105 cursor-pointer ${project.bgColor}`}
+          >
+            <div className="mb-4">
+              <Image
+                src={project.image}
+                alt={`${project.title} preview`}
+                width={100}
+                height={100}
+                className="mx-auto"
+              />
+            </div>
+            <h2 className="text-xl font-bold">{project.title}</h2>
+            <p className="mt-2 text-sm">{project.description}</p>
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-block text-sm hover:text-pink-500"
+              >
+                Learn More
+              </a>
+          </div>
         ))}
-      </ul>
-      {/* Social Links */}
-      <div className="flex justify-center gap-3">
-        <a href="https://www.linkedin.com/in/krystallwu/" target="_blank" rel="noopener noreferrer">
-          <Image src={linkedin} alt="LinkedIn" width={30} height={30} className="transform transition duration-300 ease-in-out hover:scale-105" />
-        </a>
-        <a href="https://github.com/krystallwu" target="_blank" rel="noopener noreferrer">
-          <Image src={github} alt="GitHub" width={30} height={30} className="transform transition duration-300 ease-in-out hover:scale-105" />
-        </a>
-        <a href="mailto:krystal.wu.001@gmail.com" target="_blank" rel="noopener noreferrer">
-          <Image src={email} alt="Email" width={30} height={30} className="transform transition duration-300 ease-in-out hover:scale-105" />
-        </a>
       </div>
-      <p>
-        <span className="flex justify-center">© 2025 Krystal Wu</span>
-      </p>
-      <div className="wave-wrapper">
-        <Wave
-        fill="#FFB6C1"
-        paused={false}
-        style={{
-          position: 'fixed',
-          top: '70vh',         
-          left: 0,
-          width: '100%',
-          height: '50vh',     
-          zIndex: -1          
-        }}
-        options={{
-          amplitude: 20,
-          speed: 0.15,
-          points: 3
-        }}
-        />
-      </div>
+    </section>
     </div>
   );
 };

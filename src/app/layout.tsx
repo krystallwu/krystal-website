@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Wave from "react-wavify";
+import Image from "next/image";
+import linkedin from 'public/images/linkedin.png';
+import github from 'public/images/github.png';
+import email from 'public/images/email.png';
+import resume from 'public/images/resume.png';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,9 +31,85 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative overflow-x-hidden flex flex-col min-h-screen`}
       >
-        {children}
+        <main className="flex-grow pb-20">{children}</main>
+
+        {/* Footer - persists across pages */}
+        <footer className="text-center">
+          <div className="flex justify-center gap-3 py-2">
+            <a
+              href="https://www.linkedin.com/in/krystallwu/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={linkedin}
+                alt="LinkedIn"
+                width={30}
+                height={30}
+                className="transform transition duration-300 ease-in-out hover:scale-105"
+              />
+            </a>
+            <a
+              href="https://github.com/krystallwu"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={github}
+                alt="GitHub"
+                width={30}
+                height={30}
+                className="transform transition duration-300 ease-in-out hover:scale-105"
+              />
+            </a>
+            <a
+              href="mailto:krystal.wu.001@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={email}
+                alt="Email"
+                width={30}
+                height={30}
+                className="transform transition duration-300 ease-in-out hover:scale-105"
+              />
+            </a>
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={resume}
+                alt="Resume"
+                width={30}
+                height={30}
+                className="transform transition duration-300 ease-in-out hover:scale-105"
+              />
+            </a>
+          </div>
+          <p className="pb-6">© 2025 Krystal Wu</p>
+        </footer>
+
+        {/* Fixed wave at the bottom */}
+        <div
+          className="fixed bottom-0 left-0 w-full z-[-1] overflow-hidden"
+          style={{ height: "200px", pointerEvents: "none" }}
+        >
+          <Wave
+            fill="#FFB6C1"
+            paused={false}
+            style={{ width: "100%", height: "100%" }}
+            options={{
+              amplitude: 20,
+              speed: 0.15,
+              points: 3,
+            }}
+          />
+        </div>
       </body>
     </html>
   );
