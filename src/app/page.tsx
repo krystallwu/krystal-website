@@ -48,7 +48,7 @@ const Home = () => {
             Hover over the images to learn about some of my favorite memories 😁.
             <br />
             Please head over to the work section to see my past experiences, skills, and education. 
-            <br /> In my portfolio section, you can find projects I've worked on.
+            <br /> In my portfolio section, you can find projects I&apos;ve worked on.
           </p>
           <div className="flex justify-center mt-4">
           <a
