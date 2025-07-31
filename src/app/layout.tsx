@@ -22,11 +22,11 @@ export default function RootLayout({
       <body
         className={`antialiased relative overflow-x-hidden flex flex-col min-h-screen`}
       >
-        <main className="flex-grow pb-20">{children}</main>
+        <main className="flex-grow pb-2">{children}</main>
 
         {/* Footer - persists across pages */}
         <footer className="text-center">
-          <div className="flex justify-center gap-3 py-2">
+          <div className="flex justify-center gap-3">
             <a
               href="https://www.linkedin.com/in/krystallwu/"
               target="_blank"

@@ -43,12 +43,12 @@ const Home = () => {
           <p className="mb-2">
             I am a Computer Science and FinTech student at Georgia Tech with thread concentrations in{" "}
             <span className="text-pink-400">Information-Internetworks</span> and 
-            <span className="text-pink-400"> Intelligence</span>.
+            <span className="text-pink-400"> Intelligence</span>. <br />
             In my free time, I love to bake, travel, and eat!
-            <br />
             Hover over the images to learn about some of my favorite memories 😁.
             <br />
-            Please head over to the work section to see my past experiences, skills, and education.
+            Please head over to the work section to see my past experiences, skills, and education. 
+            <br /> In my portfolio section, you can find projects I've worked on.
           </p>
           <div className="flex justify-center mt-4">
           <a
@@ -81,7 +81,7 @@ const Home = () => {
               />
               <div className={`absolute ${img.captionPosition} opacity-0 group-hover:opacity-100 transition duration-500`}>
                   <p
-                    className={`text-white text-sm ${img.angle} scribble-font ${
+                    className={`text-white text-m ${img.angle} scribble-font ${
                       isActive ? "typewriter" : ""
                     }`}
                   >
