@@ -1,18 +1,14 @@
 "use client";
 
-import Header from '@/src/app/components/Header';
-import Image from 'next/image';
-import bake from 'public/images/IMG_8256.png';
-import valentine from 'public/images/P1010021.png';
-import cheetah from 'public/images/IMG_2204.png';
-import lion from 'public/images/IMG_2080.png';
-import seafood from 'public/images/IMG_0872.png';
-import waterfall from 'public/images/IMG_3513.png';
-import linkedin from 'public/images/linkedin.png';
-import github from 'public/images/github.png';
-import email from 'public/images/email.png';
-import resume from 'public/images/resume.png';
-import { useState } from 'react';
+import Header from "@/src/app/components/Header";
+import Image from "next/image";
+import bake from "public/images/IMG_8256.png";
+import valentine from "public/images/P1010021.png";
+import cheetah from "public/images/IMG_2204.png";
+import lion from "public/images/IMG_2080.png";
+import seafood from "public/images/IMG_0872.png";
+import waterfall from "public/images/IMG_3513.png";
+import { useState } from "react";
 
 
 const images = [
@@ -42,18 +38,19 @@ const Home = () => {
         <div>
           <div className="flex gap-2 mb-4">
             <h1 className="text-3xl font-bold">Hi!</h1>
-            <h1 className="text-3xl font-bold text-pink-400">I'm Krystal.</h1>
+            <h1 className="text-3xl font-bold text-pink-400">I&apos;m Krystal.</h1>
           </div>
           <p className="mb-2">
             I am a Computer Science and FinTech student at Georgia Tech with thread concentrations in{" "}
-            <span className="text-pink-400">Information-Internetworks and Intelligence</span>.
+            <span className="text-pink-400">Information-Internetworks</span> and 
+            <span className="text-pink-400"> Intelligence</span>.
             In my free time, I love to bake, travel, and eat!
             <br />
             Hover over the images to learn about some of my favorite memories 😁.
             <br />
             Please head over to the work section to see my past experiences, skills, and education.
           </p>
-          <div className="mt-4">
+          <div className="flex justify-center mt-4">
           <a
             href="mailto:krystal.wu.001@gmail.com"
             className="justify-center bg-pink-400 text-white font-semibold px-4 py-2 rounded-full hover:bg-pink-500 transition duration-300 shadow-md"
@@ -84,8 +81,8 @@ const Home = () => {
               />
               <div className={`absolute ${img.captionPosition} opacity-0 group-hover:opacity-100 transition duration-500`}>
                   <p
-                    className={`text-white text-s ${img.angle} scribble-font ${
-                      isActive ? 'typewriter' : ''
+                    className={`text-white text-sm ${img.angle} scribble-font ${
+                      isActive ? "typewriter" : ""
                     }`}
                   >
                     {img.caption}

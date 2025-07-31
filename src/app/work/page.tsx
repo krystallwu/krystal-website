@@ -1,5 +1,4 @@
 import Header from '@/src/app/components/Header';
-import Image from 'next/image';
 
 const Work = () => {
   return (

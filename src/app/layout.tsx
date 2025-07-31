@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Wave from "react-wavify";
 import Image from "next/image";
@@ -7,16 +6,6 @@ import linkedin from 'public/images/linkedin.png';
 import github from 'public/images/github.png';
 import email from 'public/images/email.png';
 import resume from 'public/images/resume.png';
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Krystal's Personal Website",
@@ -31,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased relative overflow-x-hidden flex flex-col min-h-screen`}
+        className={`antialiased relative overflow-x-hidden flex flex-col min-h-screen`}
       >
         <main className="flex-grow pb-20">{children}</main>
 

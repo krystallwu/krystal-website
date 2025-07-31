@@ -7,14 +7,6 @@ import fcf from 'public/images/player.png';
 import storeview from 'public/images/store.png';
 import portfolio from 'public/images/portfolio.png';
 
-
-type Project = {
-  title: string;
-  description: string;
-  link: string;
-};
-
-
 const projects = [
   {
     title: 'StoreView',
