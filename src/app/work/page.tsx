@@ -98,10 +98,18 @@ const Work = () => {
       <h1 className='text-3xl font-bold text-center py-4 mb-2'>Experience</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
         <div className="bg-gray-100 p-4 rounded-lg shadow-md">
+          <h2 className="text-xl font-bold">Junior Consultant</h2>
+          <p className="text-sm text-gray-600">Undergraduate Consulting Club | August 2025 - Present</p>
+          <p className="mt-2">Work with partnering companies to develop predictive models and automation tools
+          Reduced manual workload by 33% and enhancing forecasting <br />
+          Built interactive dashboards that consolidated complex data </p>
+        </div>
+        <div className="bg-gray-100 p-4 rounded-lg shadow-md">
           <h2 className="text-xl font-bold">Mobile Development Intern</h2>
           <p className="text-sm text-gray-600">Naos Blockchain Inc. | June - August 2025</p>
           <p className="mt-2">Developed Android and iOS app using React Native and Expo <br />
-          Created unit tests that improved performance by 25% and analyzed app performance</p>
+          Created unit tests that improved UI-rendering performance by 25% <br />
+          Deployed app and distributed for internal testing</p>
         </div>
         <div className="bg-gray-100 p-4 rounded-lg shadow-md">
           <h2 className="text-xl font-bold">Teaching Assistant </h2>
@@ -111,7 +119,7 @@ const Work = () => {
         </div>
         <div className="bg-gray-100 p-4 rounded-lg shadow-md">
           <h2 className="text-xl font-bold">Undergraduate Research Assistant</h2>
-          <p className="text-sm text-gray-600">Georgia Tech Research Institute, Automotive LiDAR | January - June 2025</p>
+          <p className="text-sm text-gray-600">Georgia Tech Research Institute, Automotive LiDAR | January 2025 - Present</p>
           <p className="mt-2">Used Python and LiDAR to program robot navigation algorithms <br />
           Leveraged Robot Operating Systems and Arduino to conduct robot movement <br />
           Improved obstacle detection accuracy by 20% in autonomous test runs </p>
