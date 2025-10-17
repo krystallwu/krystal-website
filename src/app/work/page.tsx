@@ -100,9 +100,8 @@ const Work = () => {
         <div className="bg-gray-100 p-4 rounded-lg shadow-md">
           <h2 className="text-xl font-bold">Junior Consultant</h2>
           <p className="text-sm text-gray-600">Undergraduate Consulting Club | August 2025 - Present</p>
-          <p className="mt-2">Work with partnering companies to develop predictive models and automation tools
-          Reduced manual workload by 33% and enhancing forecasting <br />
-          Built interactive dashboards that consolidated complex data </p>
+          <p className="mt-2">Worked with Jeeves(YC20) to create an efficient customer feedback system <br />
+          Built interactive dashboards that consolidated complex data, streamlining feedback to Jeeves </p>
         </div>
         <div className="bg-gray-100 p-4 rounded-lg shadow-md">
           <h2 className="text-xl font-bold">Mobile Development Intern</h2>
