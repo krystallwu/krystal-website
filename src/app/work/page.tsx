@@ -137,7 +137,7 @@ const Work = () => {
           <div className="bg-gray-100 p-4 rounded-lg shadow-md">
             <h2 className="text-xl font-bold">Bachelor of Science in Computer Science</h2>
             <p className="text-sm text-gray-600">Georgia Institute of Technology | Expected Graduation: May 2027</p>
-            <p className="mt-2">GPA: 3.75 Overall, 3.85 Major <br />
+            <p className="mt-2">GPA: 3.78 Overall, 3.85 Major <br />
             Minor: FinTech (Finance and Technology) <br />
             Threads: Information Internetworks and People <br />
             Relevant Coursework: Object Oriented Programming, Data Structures, Algorithms, Computer Organization, 
