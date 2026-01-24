@@ -67,7 +67,7 @@ export default function RootLayout({
               />
             </a>
             <a
-              href="/resume.pdf"
+              href="/images/krystal-resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
