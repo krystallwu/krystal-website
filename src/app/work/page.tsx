@@ -98,6 +98,19 @@ const Work = () => {
       <h1 className='text-3xl font-bold text-center py-4 mb-2'>Experience</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
         <div className="bg-gray-100 p-4 rounded-lg shadow-md">
+          <h2 className="text-xl font-bold">Software Engineer Intern</h2>
+          <p className="text-sm text-gray-600">Block Inc. | May 2026 - Present</p>
+          <p className="mt-2">Developed and optimized MoneyBot, an LLM-powered customer support chatbot, improving response accuracy and reducing manual support workload <br />
+            Integrated backend APIs and refined prompt strategies to enable scalable, context-aware customer interactions</p>
+        </div>
+        <div className="bg-gray-100 p-4 rounded-lg shadow-md">
+          <h2 className="text-xl font-bold">Software Engineer Co-op</h2>
+          <p className="text-sm text-gray-600">Delta Airlines | January 2026 - May 2026</p>
+          <p className="mt-2">Engineered a booking summary interface using Angular and TypeScript, integrating a low-latency API to replace a legacy system<br />
+            Automated workflows to streamline repetitive tasks, improving team efficiency and reducing manual processing time<br />
+            Analyzed vulnerability reports and security data to identify trends and deliver actionable insights</p>
+        </div>
+        <div className="bg-gray-100 p-4 rounded-lg shadow-md">
           <h2 className="text-xl font-bold">Junior Consultant</h2>
           <p className="text-sm text-gray-600">Undergraduate Consulting Club | August 2025 - Present</p>
           <p className="mt-2">Worked with Jeeves(YC20) to create an efficient customer feedback system <br />
